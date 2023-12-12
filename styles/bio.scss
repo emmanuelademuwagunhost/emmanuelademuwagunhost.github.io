@@ -1,0 +1,12 @@
+@import './partials/mobile';
+@import './partials/tablet';
+@import './partials/desktop';
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
+ }
+body{
+    margin: 0%;
+    font-family: myFirstFont;
+}
