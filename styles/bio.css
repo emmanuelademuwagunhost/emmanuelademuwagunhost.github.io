@@ -17,10 +17,18 @@
     padding-left: 5%;
     padding-right: 5%;
   }
+  header {
+    background-color: #323232;
+  }
   .header__title {
     background-color: #323232;
-    padding-top: 2%;
-    padding-bottom: 0%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    display: flex;
+    justify-content: center;
+  }
+  .header__logo {
+    width: 40vw;
   }
   nav {
     background-color: #323232;
@@ -28,23 +36,26 @@
   .navigation__position {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     color: white;
   }
   .navigation__condition {
     color: white;
-    font-size: 150%;
-    padding: 1%;
+    font-size: 140%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+    font-weight: bold;
+    border-bottom: 0.3rem solid #323232;
+  }
+  .navigation__condition:hover {
+    text-decoration-thickness: 0.2rem;
+    border-bottom: 0.3rem solid white;
   }
   .nav__buttons {
     color: white;
     text-decoration: none;
     background-color: #323232;
-  }
-  .nav__buttons:hover {
-    text-decoration-thickness: 0.7rem;
-    border-bottom: 0.3rem solid white;
   }
   .hero__position {
     font-size: 500%;
@@ -62,11 +73,9 @@
     padding-bottom: 15%;
   }
   #hero__artist {
-    font-size: 4vw;
+    font-size: 5vw;
+    font-weight: bold;
     display: flex;
-    margin-left: 3vw;
-    padding-top: 0%;
-    padding-bottom: 0%;
     margin-bottom: 2%;
   }
   .hero__position {
@@ -105,44 +114,37 @@
     padding-bottom: 2%;
   }
   .img__band {
+    display: block;
     background-image: url(../assets/images/band.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     transform: scale(0.75);
     font-size: 100px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: -6%;
-    margin-bottom: -6%;
-    padding-top: 30%;
-    padding-bottom: 30%;
-  }
-  .img__band {
-    background-image: url(../assets/images/band.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    transform: scale(0.75);
-    font-size: 100px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: -9%;
+    margin-right: -5%;
+    width: 116%;
     margin-top: -6%;
     margin-bottom: -6%;
     padding-top: 30%;
     padding-bottom: 30%;
   }
   #hero__font {
-    font-size: 8vw;
+    font-size: 7vw;
     display: flex;
+    padding-left: 2vw;
     font: #e1e1e1;
     justify-content: flex-start;
+  }
+  iframe {
+    margin-left: 0%;
+    width: 94vw;
   }
   .try_this_flex {
     display: flex;
     margin: 3vw;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   textarea {
     resize: none;
@@ -356,15 +358,6 @@
     padding-top: 2%;
     padding-bottom: 2%;
   }
-  .hero__imageshowsindex {
-    background-image: url(../assets/images/hero-bio.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    padding-top: 4%;
-    padding-left: 0%;
-    padding-bottom: 4%;
-  }
   .dateOuter {
     width: 20vw;
   }
@@ -403,15 +396,15 @@
     padding-left: 0%;
     padding-bottom: 15%;
   }
+  #hero__shows {
+    color: #FAFAFA;
+    font-weight: bold;
+    font-size: 8vw;
+  }
   .try_this_flex {
     display: flex;
     flex-direction: column;
     padding-right: 10.5vw;
-  }
-  iframe {
-    margin-left: 5%;
-    width: 90vw;
-    height: 20vw;
   }
   textarea {
     resize: none;
@@ -566,14 +559,14 @@
     flex-direction: column;
   }
   .article__headerindex {
-    font-size: 8vw;
+    font-size: 7vw;
     font-weight: bold;
-    margin-left: 10%;
+    margin-left: 5%;
     padding-bottom: 2%;
     padding-top: 3%;
   }
   .article__content {
-    font-size: 130%;
+    font-size: 170%;
   }
   .hero__imageshowsindex {
     background-image: url(../assets/images/hero-bio.jpg);
@@ -585,7 +578,7 @@
     padding-bottom: 15%;
   }
   .article__title {
-    font-size: 6vw;
+    font-size: 4vw;
     font-weight: bold;
     margin-top: 5%;
     padding-left: 5%;
@@ -594,13 +587,11 @@
     margin: 5%;
   }
   .article__photogallery {
-    font-size: 8vw;
+    font-size: 7vw;
     font-weight: bold;
     padding-top: 5%;
     margin-left: 5%;
-    padding-bottom: 2%;
     padding-right: 4%;
-    padding-left: 3.8%;
   }
   footer {
     color: white;
@@ -632,6 +623,7 @@
     padding-top: 5%;
   }
   .footer__headingwrap {
+    display: none;
     font-size: 0;
   }
   .photograllery__container {
@@ -718,6 +710,12 @@
     width: 100vw;
     border-bottom: 1px solid #AFAFAF;
   }
+  .shows__mobilecontainer2 {
+    display: none;
+  }
+  .footer_bandsite {
+    max-width: 30vw;
+  }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   div h1 {
@@ -758,14 +756,14 @@
   .navigation__condition {
     color: white;
     font-size: 150%;
-    padding: 15%;
+    padding: 13%;
     border: 5px solid #323232;
   }
   .nav__buttons {
     padding: 5px;
     text-align: center;
     color: white;
-    font-size: 85%;
+    font-size: 80%;
     text-decoration: none;
     background-color: none;
     padding-bottom: 33px;
@@ -775,14 +773,13 @@
     border-bottom: 0.3rem solid white;
   }
   .header__title {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2vw;
+    padding-bottom: 3vw;
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
     align-items: end;
     align-self: flex-end;
-    border: 10px solid #323232;
     background-color: #323232;
   }
   .hero__position {
@@ -845,23 +842,31 @@
     padding-bottom: 30%;
   }
   #hero__artist {
-    font-size: 3.5vw;
+    font-size: 4vw;
+    font-weight: bold;
     display: flex;
-    margin-left: 9%;
-    padding-top: 0%;
-    padding-bottom: 0%;
     margin-bottom: 2%;
   }
   #hero__font {
-    font-size: 8vw;
+    font-size: 7vw;
     display: flex;
+    padding-left: 2vw;
     font: #e1e1e1;
     justify-content: flex-start;
   }
+  iframe {
+    margin-left: 0%;
+    width: 50vw;
+  }
+  #hero__shows {
+    color: #FAFAFA;
+    font-weight: bold;
+    font-size: 7vw;
+  }
   .try_this_flex {
     display: flex;
-    margin: 9%;
-    flex-direction: row;
+    margin: 5%;
+    flex-direction: column;
     justify-content: space-between;
   }
   textarea {
@@ -1022,26 +1027,47 @@
   .shows__fullbock {
     padding-left: 5vW;
   }
-  .shows_titledateOuter {
+  .mobile__dateblock {
+    display: none;
     font-size: 1.5vw;
     color: #AFAFAF;
     width: 20vw;
   }
-  .shows_titlevenueOuter {
+  .mobile__dateblock2 {
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #AFAFAF;
+    width: 20vw;
+  }
+  .mobile__venueblock {
+    display: none;
     font-size: 1.5vw;
     color: #AFAFAF;
     width: 12vw;
   }
-  .showstitle_locationOuter {
+  .mobile__venueblock2 {
+    font-size: 1.2vw;
+    color: #AFAFAF;
+    font-weight: bold;
+    width: 12vw;
+  }
+  .mobile__locationblock {
+    display: none;
     font-size: 1.5vw;
     color: #AFAFAF;
     width: 15vw;
   }
-  .shows__dateOuter {
+  .mobile__locationblock2 {
+    font-size: 1.2vw;
+    color: #AFAFAF;
+    font-weight: bold;
+    width: 15vw;
+  }
+  .mobile__date {
     width: 20vw;
     font-weight: bold;
   }
-  .submit__button {
+  .mobile__buytickets {
     background-color: #323232; /* Green */
     border: none;
     color: white;
@@ -1059,7 +1085,7 @@
     padding-top: 2%;
     padding-bottom: 3%;
   }
-  .shows__container {
+  .shows__mobilecontainer {
     display: flex;
     flex-direction: row;
     font-weight: 100;
@@ -1069,13 +1095,19 @@
     padding-top: 2%;
     padding-bottom: 2%;
   }
+  .shows__mobilecontainer2 {
+    display: flex;
+    flex-direction: row;
+    font-weight: 100;
+    font-size: 90%;
+    align-items: center;
+    padding-top: 7%;
+    padding-bottom: 2%;
+  }
   .shows__maincontainer {
     display: flex;
-    font-weight: bold;
-    margin-left: 1%;
+    flex-direction: row;
     padding-bottom: 2%;
-    padding-top: 3%;
-    padding-right: 1%;
   }
   .hero__imageshowsindex {
     background-image: url(../assets/images/hero-bio.jpg);
@@ -1093,14 +1125,14 @@
     width: 15vw;
     font-weight: bold;
   }
-  .venueOuter {
+  .mobile__venue {
     width: 12vw;
   }
   .venueOuter__mobile {
     width: 13vw;
     font-weight: bold;
   }
-  .locationOuter {
+  .mobile__location {
     width: 17vw;
   }
   .locationOuter__mobile {
@@ -1132,9 +1164,8 @@
     font-weight: bold;
     margin-left: 5%;
     padding-bottom: 2%;
-    padding-top: 2%;
+    padding-top: 3%;
     padding-right: 4%;
-    padding-left: 3.8%;
   }
   .article__headerindex {
     font-size: 4vw;
@@ -1208,8 +1239,8 @@
     align-items: center;
     justify-content: center;
   }
-  #footer__bandsite {
-    font-weight: lighter;
+  .footer_bandsite {
+    display: none;
   }
   .footer__block {
     margin: 5%;
@@ -1297,12 +1328,20 @@
     justify-content: flex-start;
   }
   #hero__artist {
-    font-size: 3.5vw;
+    font-size: 4vw;
+    font-weight: bold;
     display: flex;
-    margin-left: 9%;
-    padding-top: 0%;
-    padding-bottom: 0%;
     margin-bottom: 2%;
+  }
+  #hero__shows {
+    color: #FAFAFA;
+    font-weight: bold;
+    font-size: 7vw;
+  }
+  iframe {
+    margin-left: 0%;
+    width: 40vw;
+    padding-right: -6%;
   }
   .hero__musicplaceholdermain {
     width: 900px;
@@ -1377,6 +1416,11 @@
   .try_this_flex {
     display: flex;
     margin: 9%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .desktop__iframe {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -1542,26 +1586,47 @@
   .shows__fullbock {
     padding-left: 5vw;
   }
-  .shows_titledateOuter {
+  .mobile__dateblock {
+    display: none;
     font-size: 0.9vw;
     color: #AFAFAF;
     width: 20vw;
   }
-  .shows_titlevenueOuter {
+  .mobile__dateblock2 {
+    font-size: 1vw;
+    font-weight: bold;
+    color: #AFAFAF;
+    width: 19vw;
+  }
+  .mobile__venueblock {
+    display: none;
     font-size: 0.9vw;
     color: #AFAFAF;
     width: 12vw;
   }
-  .showstitle_locationOuter {
+  .mobile__venueblock2 {
+    font-size: 1vw;
+    color: #AFAFAF;
+    font-weight: bold;
+    width: 12vw;
+  }
+  .mobile__locationblock {
+    display: none;
     font-size: 0.9vw;
     color: #AFAFAF;
     width: 15vw;
   }
-  .shows__dateOuter {
+  .mobile__locationblock2 {
+    font-size: 1vw;
+    color: #AFAFAF;
+    font-weight: bold;
+    width: 15vw;
+  }
+  .mobile__date {
     width: 20vw;
     font-weight: bold;
   }
-  .submit__button {
+  .mobile__buytickets {
     background-color: #323232; /* Green */
     border: none;
     color: white;
@@ -1571,6 +1636,7 @@
     display: inline-block;
     font-size: 1vw;
     border-radius: 5px;
+    width: 13vw;
   }
   .comment__button {
     background-color: #323232; /* Green */
@@ -1591,7 +1657,7 @@
     padding-top: 2%;
     padding-bottom: 3%;
   }
-  .shows__container {
+  .shows__mobilecontainer {
     display: flex;
     flex-direction: row;
     font-weight: 100;
@@ -1600,6 +1666,19 @@
     align-items: center;
     padding-top: 2%;
     padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .shows__mobilecontainer2 {
+    display: flex;
+    flex-direction: row;
+    font-weight: 100;
+    font-size: 90%;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
   }
   .shows__maincontainer {
     display: flex;
@@ -1616,14 +1695,14 @@
     width: 15vw;
     font-weight: bold;
   }
-  .venueOuter {
+  .mobile__venue {
     width: 12vw;
   }
   .venueOuter__mobile {
     width: 13vw;
     font-weight: bold;
   }
-  .locationOuter {
+  .mobile__location {
     width: 17vw;
   }
   .locationOuter__mobile {
@@ -1734,8 +1813,8 @@
     align-items: center;
     justify-content: center;
   }
-  #footer__bandsite {
-    font-weight: lighter;
+  .footer_bandsite {
+    display: none;
   }
   .footer__block {
     margin: 5%;

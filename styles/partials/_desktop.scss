@@ -79,13 +79,23 @@ $breakpoint-desktop: 1280px;
     }
 
     #hero__artist{
-        font-size: 3.5vw;
+        font-size: 4vw;
+        font-weight: bold;
         display: flex;
-        margin-left: 9%;
-        padding-top: 0%;
-        padding-bottom: 0%;
         margin-bottom: 2%;
     }
+    #hero__shows{
+        color: #FAFAFA;
+        font-weight: bold;
+        font-size: 7vw;
+
+        }
+    iframe{
+            margin-left: 0%;
+            width:40vw;
+            padding-right: -6%;
+    
+        }
 
     .hero__musicplaceholdermain{
         width: 900px;
@@ -164,6 +174,11 @@ $breakpoint-desktop: 1280px;
     .try_this_flex{
         display: flex;
         margin: 9%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .desktop__iframe{
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -345,29 +360,58 @@ $breakpoint-desktop: 1280px;
 
     }
    
-    .shows_titledateOuter{
+    // .shows_titledateOuter
+    .mobile__dateblock{
+        display: none; //Recently Added
         font-size: 0.9vw;
         color:$showscolor;
         width: 20vw;
         // padding-bottom: 0.7vw;
     }
-    .shows_titlevenueOuter{
+    .mobile__dateblock2{
+       // display: none; //Recently Added
+        font-size: 1vw;
+        font-weight: bold;
+        color:$showscolor;
+        width: 19vw;
+
+    }
+    //shows_titlevenueOuter
+    .mobile__venueblock{
+        display: none;
         font-size: 0.9vw;
         color:$showscolor;
         width: 12vw;
     }
+    .mobile__venueblock2{
+        font-size: 1vw;
+        color:$showscolor;
+        font-weight: bold;
+        width: 12vw;
 
-    .showstitle_locationOuter{
+    }
+//showstitle_locationOuter
+    .mobile__locationblock{
+        display: none;
         font-size: 0.9vw;
         color:$showscolor;
         width: 15vw;
     }
+    .mobile__locationblock2{
+        // display: none;
+        font-size: 1vw;
+        color:$showscolor;
+        font-weight: bold;
+        width: 15vw;
+    }
     
-    .shows__dateOuter{
+    //shows__dateOuter
+    .mobile__date{
         width: 20vw;
         font-weight: bold;
     }
-    .submit__button{
+    //.submit__button
+    .mobile__buytickets{
         background-color: $bg_color; /* Green */
         border: none;
         color: white;
@@ -377,7 +421,7 @@ $breakpoint-desktop: 1280px;
         display: inline-block;
         font-size: 1vw;
         border-radius: 5px;
-        
+        width: 13vw;
     }
     .comment__button{
         background-color: $bg_color; /* Green */
@@ -400,7 +444,8 @@ $breakpoint-desktop: 1280px;
         padding-top: 2%;
         padding-bottom: 3%;
     }
-    .shows__container{
+    //.shows__container
+    .shows__mobilecontainer{
 
         display: flex;
         flex-direction: row;
@@ -411,6 +456,22 @@ $breakpoint-desktop: 1280px;
         align-items: center;
         padding-top: 2%;
         padding-bottom: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .shows__mobilecontainer2{
+
+        display: flex;
+        flex-direction: row;
+        font-weight: 100;
+        font-size: 90%;   
+        // justify-content: space-around;
+        // border-bottom: 1.8px solid $commentlinecolor;
+        align-items: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
     }
     .shows__maincontainer{
 
@@ -432,15 +493,16 @@ $breakpoint-desktop: 1280px;
             font-weight: bold;
         }
        
-      
-        .venueOuter{
+      //venueOuter
+        .mobile__venue{
             width: 12vw;
         }
         .venueOuter__mobile{
             width: 13vw;
             font-weight: bold;
         }
-        .locationOuter{
+        //.locationOuter
+        .mobile__location{
             width: 17vw;
         }
         .locationOuter__mobile{
@@ -559,8 +621,8 @@ $breakpoint-desktop: 1280px;
         align-items: center;
         justify-content: center;
     }
-    #footer__bandsite{
-        font-weight: lighter;
+    .footer_bandsite{
+        display: none;
     }
      .footer__block{
         margin: 5%;
@@ -580,5 +642,6 @@ $breakpoint-desktop: 1280px;
 .copyright__footer{
     padding-left: 4.5%;
     }  
+
    }
   

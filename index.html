@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to the Coolest Ever Band Site</title>
     <link rel="stylesheet" href="./styles/bio.css"/>
-    <script src="./scripts/index-page.js"></script>
+   
 </head>
 <body>
 <header>
     <div class="navigation__container">
     
-        <div class="header__title"><h1>BANDSITE</h1></div>
+        <div class="header__title"><a href="./index.html"><img src="../assets/Logo/Logo-bandsite.svg" class="header__logo"></a></div>
         <nav class="navigation__position">
             <div class="navigation__condition"><a href="./index.html" class="nav__buttons">Biography</a></div>
             <div class="navigation__condition"><a href="./pages/shows.html" class="nav__buttons">Shows</a></div>
@@ -60,10 +60,10 @@
         <form name="myForm" class="comment__form">
              <div class="shows_titledateOuter">NAME</div>
              <div><input type="text" placeholder="Enter your name" id="inputtext__name" name="name"></div>
-             <p></p>
+             <p></p> <!--Was told to Use Labels-->
              <div class="shows_titledateOuter">COMMENT</div>
              <div class="comment__flexend1"><textarea placeholder="Add a new comment" name="comment" id="textarea__comment"></textarea></div>
-             <div class="comment_flex_end"><button class ="comment__button">COMMENT</button></div>
+             <div class="comment_flex_end"><button class ="comment__button" name ="commentButton">COMMENT</button></div>
 
         </form>
     </div>
@@ -73,11 +73,8 @@
 
     </section>
     <div class ="comment__maincontainer"><div class="comment__contents"></div></div>
-    
 
      <!--This is the Beginning of the Comment Section-->
-
-
 
 </main>
 
@@ -91,8 +88,8 @@
                 <div class="socialmedia__icon--platform"><img src="./assets/icons/SVG/Icon-facebook.svg" alt = "Facebook"></div>
                 <div class="socialmedia__icon--platform"><img src="./assets/icons/SVG/Icon-twitter.svg" alt = "Twitter"></div>
             </div>
-            <div class = "footer__headingwrap"><h2 id="footer_bandsite">BANDSITE</h2></div>
-        
+            <!-- <div class = "footer__headingwrap"><h2 id="footer_bandsite">BANDSITE</h2></div> -->
+            <div class="footer__headingwrap"><a href="../index.html"><img src="../assets/Logo/Logo-bandsite.svg" id="footer_bandsite"></a></div>
         </div>
         
         <div class="contact_container">
@@ -117,9 +114,15 @@
                 <div class="contact__email">cwhyte@archentertainment.com </div>
             </div>
         </div>
-        <div id = "footer__heading"><h2>BANDSITE</h2></div>
+        <!-- <div id = "footer__heading"><h2>BANDSITE</h2></div> -->
+        <div id = "footer__heading"><a href="./index.html"><img src="../assets/Logo/Logo-bandsite.svg" class="footer_bandsite"></a></div>
         <div class="copyright__footer">Copyright The Bees Knees &copy; 2021 All Rights Reserved &nbsp;</div>
     </div>
 </footer>
 </body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+<!-- <script type ="module" src="./scripts/api_test.js"></script> -->
+
+<script type ="module" src="./scripts/index-page.js"></script>
+
 </html>

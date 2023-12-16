@@ -6,15 +6,17 @@
     <title>Welcome to the Coolest Ever Band Site</title>
     <link rel="stylesheet" href="../styles/bio.css"/>
 
+   
+
 </head>
 <body>
 <header>
     <div class="navigation__container">
     
-        <div class="header__title"><h1>BANDSITE</h1></div>
+        <div class="header__title"><a href="../index.html"><img src="../assets/Logo/Logo-bandsite.svg" class="header__logo"></a></div>
         <nav class="navigation__position">
             <div class="navigation__condition"><a href="../index.html" class="nav__buttons">Biography</a></div>
-            <div class="navigation__condition"><a href="../pages/shows.html" class="nav__buttons">Shows</a></div>
+            <div class="navigation__condition"><a href="./shows.html" class="nav__buttons">Shows</a></div>
         </nav>
     </div>
 </header>
@@ -23,16 +25,16 @@
 <main>
     
     <div class="hero__imageshows">
-        <div><h5 id="hero__artist">Twice as Tall</h5></div>
+        
         <div class ="try_this_flex">
-            <h1 id="hero__font">Way Too Big</h1>
-            <!-- <div class="hero__musicplaceholdermain"> -->
-          <!-- <div class ="hero__font"> <iframe width="35%" height="100" scrolling="no" class ="hero__musicplaceholder" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/874882123&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>  -->
-            <!-- </div> -->
-            
+            <div id="hero__artist">Made in Lagos</div>
+<div class = "desktop__iframe">
+            <div id="hero__shows">Blessed</div>
+          
+                <iframe width="100%"class="iframe" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/907458208&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>          
+    
         </div>
-      
-       
+        </div>
     </div>
    
     
@@ -42,8 +44,17 @@
     <!-- <div></div> -->
     <!--Shows Starts Here-->   
     <div class="shows__fullbock"></div> 
+    
     <div class ="inject__showshere">  
-        
+        <div class = "shows__mobilecontainer2">
+                <div class ="mobile__dateblock2">DATE</div>
+                <div class ="mobile__venueblock2">VENUE</div>
+                <div class ="mobile__locationblock2">LOCATION</div>
+            </div>
+        <div class ="inject__showshere2">  
+
+        </div>
+
         
     </div>  
     <!--Shows Ends Here-->   
@@ -60,7 +71,8 @@
                 <div class="socialmedia__icon--platform"><img src="../assets/icons/SVG/Icon-facebook.svg" alt = "Facebook"></div>
                 <div class="socialmedia__icon--platform"><img src="../assets/icons/SVG/Icon-twitter.svg" alt = "Twitter"></div>
             </div>
-            <div class = "footer__headingwrap"><h2 id="footer_bandsite">BANDSITE</h2></div>
+            <!-- <div class = "footer__headingwrap"><h2 id="footer_bandsite">BANDSITE</h2></div> -->
+            <div class="footer__headingwrap"><a href="../index.html"><img src="../assets/Logo/Logo-bandsite.svg" id="footer_bandsite"></a></div>
         
         </div>
         
@@ -86,10 +98,12 @@
                 <div class="contact__email">cwhyte@archentertainment.com </div>
             </div>
         </div>
-        <div id = "footer__heading"><h2>BANDSITE</h2></div>
+        <div id = "footer__heading"><a href="./index.html"><img src="../assets/Logo/Logo-bandsite.svg" class="footer_bandsite"></a></div>
         <div class="copyright__footer">Copyright The Bees Knees &copy; 2021 All Rights Reserved &nbsp;</div>
     </div>
 </footer>
 </body>
-<script src="../scripts/build-shows-page.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+<script type ="module" src="../scripts/build-shows-page.js"></script>
+<!-- <script type ="module" src="./scripts/comments.js"></script> -->
 </html>

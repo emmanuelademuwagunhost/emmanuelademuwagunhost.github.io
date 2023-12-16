@@ -1,30 +1,26 @@
-    let shows =[
-        {date: "Mon Sept 06 2021", venue: "Ronald Lane", location:"San Francisco, CA", submit: "BUY TICKETS"},
-        {date: "Tue Sept 21 2021", venue: "Pier 3 East", location:"San Francisco, CA", submit: "BUY TICKETS"},
-        {date: "Fri Oct 15 2021", venue: "View Lounge", location:"San Francisco, CA", submit: "BUY TICKETS"},
-        {date: "Sat Nov 06 2021", venue: "Hyatt Agency", location:"San Francisco, CA", submit: "BUY TICKETS"},
-        {date: "Fri Nov 26 2021", venue: "Moscow Center", location:"San Francisco, CA", submit: "BUY TICKETS"},
-        {date: "Wed Dec 15 2021", venue: "Press Club", location:"San Francisco, CA", submit: "BUY TICKETS"},
+import BandSiteApi from "./band-site-api.js";
+const apiKey ="77d4b93f-600d-4b30-9267-31ae6d9db9c0"
+const postShowsCall = new BandSiteApi(apiKey);
+const shows = await postShowsCall.getShows();
+console.log(shows);
 
-    ];
-    
-    // Function Created for Mobile
+// Function Created for Mobile
     function showsMobileFunk (i) {
-
+        const newTimeStamp = timeStampConversionShows(shows[i].date)
         const mainContainer = document.createElement("div")
         mainContainer.classList.add("shows__mobilecontainer")
         const dateBlock = document.createElement("div")
         dateBlock.classList.add("mobile__dateblock")
         dateBlock.innerHTML = "DATE"
         const dateMain = document.createElement("div")
-        dateMain.innerHTML = shows[i].date
+        dateMain.innerHTML = newTimeStamp
         dateMain.classList.add("mobile__date")
         const venueBlock = document.createElement("div")
         venueBlock.innerHTML = "VENUE"
         venueBlock.classList.add("mobile__venueblock")
         const venueMain = document.createElement("div")
         venueMain.classList.add("mobile__venue")
-        venueMain.innerHTML =shows[i].venue
+        venueMain.innerHTML =shows[i].place
         const locationBlock = document.createElement("div")
         locationBlock.innerHTML = "LOCATION"
         locationBlock.classList.add("mobile__locationblock")
@@ -52,7 +48,6 @@
         return mainContainer;    
     }
 
-    
     function showsTabDeskFunk (i) {
         const showsContainer = document.createElement("div")
         showsContainer.classList.add("shows__container")
@@ -70,7 +65,6 @@
         const submitButton = document.createElement("button")
         submitButton.classList.add("submit__button")
         submitButton.innerHTML = shows[i].submit
-       
         
         showsContainer.appendChild(showsDateOuter)
         showsContainer.appendChild(venueOuter)
@@ -81,42 +75,23 @@
         return showsContainer;   
         }
 
-        
-
-let  insertDOM = document.querySelector(".inject__showshere");
-
-function myFunction(x) {
-  if (x.matches) { // If media query matches
+let  insertDOM = document.querySelector(".inject__showshere2");
     insertDOM.innerHTML= "";
     for (let i=0; i< shows.length; i++){
         
-        insertDOM = document.querySelector(".inject__showshere")
+        insertDOM = document.querySelector(".inject__showshere2")
         insertDOM.appendChild(showsMobileFunk(i))
         console.log(showsMobileFunk(i))
         
     }
-            } 
-else {
-    
-    insertDOM.innerHTML ="";
-    for (let i=0; i< shows.length; i++){
-       
-        insertDOM = document.querySelector(".inject__showshere")
-        insertDOM.appendChild(showsTabDeskFunk(i))
-        console.log(showsTabDeskFunk(i))
-     }
-             }
-}
+          
 
-// Create a MediaQueryList object
-var x = window.matchMedia("(max-width: 767px)")
+// The timestamp Conversion Function
 
-// Call listener function at run time
-myFunction(x);
-
-// Attach listener function on state changes
-x.addEventListener("change", function() {
-  myFunction(x);
-})
-
-    
+function timeStampConversionShows(timestamp){
+    // Got this from  the internet
+       const date = new Date(timestamp);
+       const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+       const formattedDate = date.toLocaleDateString('en-US', options).replace(/,/g, '');
+       return formattedDate;
+   }
